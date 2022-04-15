@@ -37,10 +37,11 @@ export default function Input() {
         }`}
       >
         <input
-          className="rounded-sm border-2 border-gray-300 py-1 px-2 w-full"
+          className="rounded-sm border-2 border-gray-300 text-sm py-1 px-2 w-full h-9"
           type="text"
           name="email"
           value={value}
+          placeholder="E-mail"
           autoComplete="false"
           autoFocus={false}
           onChange={handleChange}

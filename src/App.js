@@ -18,9 +18,9 @@ function App() {
     <div className="App">
       <Toggle />
       <Tab />
+      <Slider />
       <Input />
       <Dropdown items={dropdownList} initialTarget="All Symbols" />
-      <Slider />
     </div>
   );
 }

@@ -19,10 +19,12 @@ const Slide = styled.input`
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: rgb(20 184 166);
-    height: 0.8rem;
-    width: 0.8rem;
+    border: solid;
+    border-color: white;
+    height: 1rem;
+    width: 1rem;
     border-radius: 100%;
-    box-shadow: rgb(20 184 166);
+    box-shadow: 0 0.5px 0.5px 0 rgb(156 163 175);
   }
 `;
 
@@ -34,8 +36,20 @@ const SlideBtn = styled.button`
   border-radius: 15px;
 `;
 
+const SlideCircle = styled.div`
+  position: absolute;
+  z-index: -1;
+  background: ${(props) =>
+    props.isOn ? "rgb(20 184 166)" : "rgb(209 213 219)"};
+  bottom: 0.2rem;
+  left: ${(props) => props.left}rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 0.8rem;
+`;
+
 export default function Slider() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(50);
 
   return (
     <div className="w-60 my-10 mx-auto">
@@ -43,13 +57,24 @@ export default function Slider() {
         <div className="w-48 text-right">{value}</div>
         <div className="w-8 p-1 text-xs text-gray-400">%</div>
       </div>
-      <Slide
-        value={value}
-        min={1}
-        max={100}
-        type="range"
-        onChange={(e) => setValue(e.target.value)}
-      />
+      <div className="relative">
+        <Slide
+          value={value}
+          min={1}
+          max={100}
+          type="range"
+          onChange={(e) => {
+            const rate = e.target.value;
+            setValue(rate);
+          }}
+        />
+        <SlideCircle left={0.5} isOn={true} />
+        <SlideCircle left={3.7} isOn={value >= 25 ? true : false} />
+        <SlideCircle left={7} isOn={value >= 50 ? true : false} />
+        <SlideCircle left={10.5} isOn={value >= 75 ? true : false} />
+        <SlideCircle left={13.8} isOn={false} />
+      </div>
+
       <div
         className="flex flex-row justify-between mt-1"
         onClick={(e) => {

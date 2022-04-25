@@ -1,5 +1,4 @@
-# wanted_pre_onboarding
-
+# 원티드 프리 온보딩 코스
 ### 문제 1.
 
 버튼 흰 부분의 position `absolute`로 정한 후 animation을 통해 누르는 버튼의 방향으로 따라다니게끔 설계 하였습니다.

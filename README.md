@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+=======
+# 원티드 프리 온보딩 코스
+### 문제 1.
+>>>>>>> 5e60195ca38249170eb79b284572e604f42ab64d
 
 ## Available Scripts
 
@@ -43,6 +48,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+<<<<<<< HEAD
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
@@ -68,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+dropdown을 보여주고 끌때마다 `input` value를 초기화 하여 기존 필터링을 제거 하였습니다.
+>>>>>>> 5e60195ca38249170eb79b284572e604f42ab64d

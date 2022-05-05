@@ -1,44 +1,70 @@
-# wanted_pre_onboarding
+# Getting Started with Create React App
 
-### 문제 1.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-버튼 흰 부분의 position `absolute`로 정한 후 animation을 통해 누르는 버튼의 방향으로 따라다니게끔 설계 하였습니다.
+## Available Scripts
 
-### 문제 2.
+In the project directory, you can run:
 
- tab을 선택하였을때 아랫 부분인 녹색 bottom-border의 position을 `absolute`로  설정하여 탭을 누를때 마다 그 탭을 따라 다니게끔 설계하였습니다. 하지만 애니메이션을 적용하는 과정에서 탭에서 다른 탭으로 이동하는 animation을 일일히 지정해주고 일일이 만들어 줘야 했습니다. 그렇게 된다면 나중에 tab에서 더 많은 선택지가 주어질때 너무 개발이 귀찮고 코드도 깔끔하지 못할 것 같아서 이런 부분을 리팩토링 해야 할 것 같습니다.
+### `npm start`
 
-### 문제 3.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-slider를 구현하는 데에 있어서 css에 변수를 매번 넣어줄 필요성을 느껴 `styled-component`를 함께 사용하였습니다.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-slider의 초기값은 50으로 설정하였고 최소값은 1 최대값은 100으로 설정하였습니다. 
+### `npm test`
 
-slider 레일 속 둥근 점은 `absolute`로 설정하였으며 value의 크기에 따라 색깔이 변하게끔 설정 해주었습니다. 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 문제 4.
+### `npm run build`
 
-1. E-mail
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-   이메일을 인풋 받는 부분에서 체크 부분은 input태그 내에 value가 변경될때 실시간으로 체크하여 valid할때 불이 오게끔 구현하였고,
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-   아래 invali email address 부분은 email input에 포커스가 없고 value가 0보다 길고 valid하지 않을때 나오게끔 설계 하였습니다.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-   **validation 규칙**
+### `npm run eject`
 
-   1. 알파벳으로 시작하고 @ 앞부분은 최소 2자리 이상이며 알파벳과 숫자만 올 수 있고 
-   2. @는 무조건 포함되어야 하며
-   3. @ 뒷부분은  `내용.내용`의 형식을 만족하게끔 하였습니다. 
-   4. 이후의 문자열에서 `.내용`의 형식이 여러번 등장 가능 하도록 하였습니다.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-2. Password
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-   passoword부분은 처음에는 input의 type을 password로 지정한 후 오른쪽 눈을 누를때 마다 type이 변하게끔 하였습니다. 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### 문제 5.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-dropdown은 이제 `initialTarget`과 `items`를 `props`로 받아서 컴포넌트를 생성할 수 있게끔 하였습니다.
+## Learn More
 
-키워드 필터링은 value가 변할때 마다 `props`중 하나인 `items`를 filter하는 방식으로 구현하였습니다.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-dropdown을 보여주고 끌때마다 `input` value를 초기화 하여 기존 필터링을 제거 하였습니다.
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

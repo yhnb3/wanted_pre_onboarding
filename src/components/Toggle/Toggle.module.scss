@@ -1,0 +1,41 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/position';
+@use '/src/styles/constants/levels';
+
+.container {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 30px;
+  padding: 2px;
+  background-color: colors.$GRAYE;
+  border-radius: 50px;
+}
+
+.onToggle {
+  @include position.absolute(2px 0 0 2px);
+  z-index: levels.$ONTOGGLE;
+  width: 50%;
+  height: 26px;
+  background-color: colors.$WHITE;
+  border-radius: 50px;
+  transition: all 0.3s ease-out;
+  transform: translate(0);
+}
+
+.button {
+  @include flexbox.flexbox(center, center);
+  z-index: levels.$TOGGLEBUTTON;
+  width: 50%;
+  font-size: 10px;
+  font-weight: 600;
+
+  &.gray {
+    color: colors.$GRAYA;
+  }
+}
+
+.isToggle {
+  transform: translate(96px);
+}

@@ -12,7 +12,7 @@ function Toggle() {
 
   return (
     <div className={styles.container}>
-      <div className={cx(styles.onToggle, { [styles.isToggle]: isToggle })} />
+      <div className={cx(styles.onToggle, { [styles.selected]: isToggle })} />
       <button type='button' onClick={() => handleToggle()} className={cx(styles.button, { [styles.gray]: isToggle })}>
         기본
       </button>

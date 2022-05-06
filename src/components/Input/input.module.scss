@@ -1,0 +1,74 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/position';
+
+.container {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  padding: 5px;
+  font-size: 10px;
+  color: colors.$GRAYA;
+
+  + input {
+    margin-top: 5px;
+  }
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  font-size: 8px;
+  background-color: colors.$GRAYE;
+  border: 1.5px solid colors.$GRAYD;
+  border-radius: 3px;
+
+  &:focus {
+    border: 1.5px solid colors.$BLACK;
+  }
+
+  &::placeholder {
+    color: colors.$GRAYD;
+  }
+}
+
+.validationMsg {
+  width: 100%;
+  padding: 1px 3px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  color: colors.$RED;
+  visibility: visible;
+
+  &.valid {
+    visibility: hidden;
+  }
+}
+
+.eyeIcon {
+  @include position.absolute(100px 0 0 165px);
+
+  svg {
+    width: 30px;
+    height: 20px;
+
+    &.indigo {
+      fill: colors.$INDIGO;
+    }
+  }
+}
+
+.checkedIcon {
+  @include position.absolute(26px 0 0 165px);
+  width: 30px;
+  height: 20px;
+  fill: colors.$GRAYD;
+
+  &.indigo {
+    fill: colors.$INDIGO;
+  }
+}

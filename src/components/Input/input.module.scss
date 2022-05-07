@@ -4,35 +4,35 @@
 .container {
   position: relative;
   width: 200px;
-  margin: 0 auto;
+  margin: 50px auto;
   text-align: left;
-}
 
-label {
-  padding: 5px;
-  font-size: 10px;
-  color: colors.$GRAYA;
+  label {
+    padding: 5px;
+    font-size: 10px;
+    color: colors.$GRAYA;
 
-  + input {
-    margin-top: 5px;
-  }
-}
-
-input {
-  width: 100%;
-  height: 30px;
-  padding: 5px;
-  font-size: 8px;
-  background-color: colors.$GRAYE;
-  border: 1.5px solid colors.$GRAYD;
-  border-radius: 3px;
-
-  &:focus {
-    border: 1.5px solid colors.$BLACK;
+    + input {
+      margin-top: 5px;
+    }
   }
 
-  &::placeholder {
-    color: colors.$GRAYD;
+  input {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    font-size: 8px;
+    background-color: colors.$GRAYE;
+    border: 1.5px solid colors.$GRAYD;
+    border-radius: 3px;
+
+    &:focus {
+      border: 1.5px solid colors.$BLACK;
+    }
+
+    &::placeholder {
+      color: colors.$GRAYD;
+    }
   }
 }
 

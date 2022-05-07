@@ -1,8 +1,6 @@
 import styles from './Routes.module.scss'
 
-import Toggle from '../components/Toggle'
-import Tab from '../components/Tab'
-import Input from '../components/Input'
+import { Toggle, Tab, Input, Dropdown } from '../components'
 
 function App() {
   return (
@@ -10,7 +8,8 @@ function App() {
       <div className={styles.container}>
         {/* <Toggle /> */}
         {/* <Tab /> */}
-        <Input />
+        {/* <Input /> */}
+        <Dropdown />
       </div>
     </div>
   )
